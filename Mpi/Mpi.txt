@@ -1,0 +1,12 @@
+sudo apt-get update
+sudo apt install build-essential
+sudo apt-get install openmpi-bin openmpi-doc libopenmpi-dev
+
+Pi:
+mpicc brpi.c -o brpi.out
+mpirun - -oversubscribe -np 200 brpi.out
+
+
+Matrix
+mpicc brmat.c -o brat.out
+mpirun - -oversubscribe -np 3 brat.out
